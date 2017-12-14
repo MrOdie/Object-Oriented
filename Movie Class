@@ -1,0 +1,87 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package movielist;
+
+/**
+ *
+ * @author sodie
+ */
+public class Movie {
+    private String movieName;
+    private String rating;
+    private int year;
+    private int runTime;
+    private String actor;
+    private String actress;
+    public Movie(String name, String rating, int year, int runTime, String actor,
+            String actress)
+    {
+        this.movieName = name;
+        this.rating = rating;
+        this.year = year;
+        this.runTime = runTime;
+        this.actor = actor;
+        this.actress = actress;
+    }
+    public String getMovieName()
+    {
+        return movieName;
+    }
+    public void setMovieName(String value)
+    {
+        movieName = value;
+    }
+    public String getRating()
+    {
+        return rating;
+    }
+    public void setRating(String value)
+    {
+        rating = value;
+    }
+    public int getYear()
+    {
+        return year;
+    }
+    public void setYear(int value)
+    {
+        year = value;
+    }
+    public int getRunTime()
+    {
+        return runTime;
+    }
+    public void setRunTime(int value)
+    {
+        runTime = value;
+    }
+    public String getActor()
+    {
+        return actor;
+    }
+    public void setActor(String value)
+    {
+        actor = value;
+    }
+    public String getActress()
+    {
+        return actress;
+    }
+    public void setActress(String value)
+    {
+        actress = value;
+    }
+    public String toString()
+    {
+        return "Movie name: " +movieName +
+               "\nRating: " +rating +
+               "\nMovie Year: " +year +
+               "\nRun Time: " +runTime +
+               "\nActor: " +actor + 
+               "\nActress: " +actress;
+    }
+       
+}
