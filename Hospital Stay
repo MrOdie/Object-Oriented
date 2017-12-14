@@ -1,0 +1,51 @@
+package hospitalstay;
+import java.util.Scanner;
+
+public class HospitalStay {
+
+    
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        double dailyRate = 0, medCharges = 0, labCharges = 0, totalCost;
+        String response = "";
+        do {
+            if(checkForOvernight() == true) 
+            {
+                System.out.println("Enter the cost for the hospital stay: ");
+                dailyRate = in.nextDouble();
+            }
+            else 
+            {
+                dailyRate = 0;
+            }
+            System.out.println("Enter the Medicine costs: ");
+            medCharges = in.nextDouble();
+            System.out.println("Enter the Lab service charges: ");
+            labCharges = in.nextDouble();
+            totalCost = dailyRate + medCharges + labCharges;
+            printTotal(totalCost);
+            System.out.println("Are there any additional patients? (y/n)");
+            response = in.next();
+        } while(response.equalsIgnoreCase("y"));
+    }
+    
+    public static boolean checkForOvernight() 
+    {
+        Scanner in = new Scanner(System.in);
+        String response = "";
+        System.out.println("Did you stay overnight? (y/n)");
+        response = in.next();
+        if(response.equalsIgnoreCase("y"))
+            return true;
+        else
+            return false;
+    }
+    
+    public static void printTotal(double totalCost)
+    {
+        System.out.printf("The total cost for this patient is: $%6.2f", 
+                totalCost);
+        System.out.println();
+    }            
+}
+
