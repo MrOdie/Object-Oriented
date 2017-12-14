@@ -1,0 +1,39 @@
+/*
+ * This program is for the challenge on creating classes
+  Name, rating, year, run time
+ */
+package movielist;
+import java.util.Scanner;
+/**
+ *
+ * @author Peggy Fisher
+ */
+public class MovieList {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String movie, rating, actor, actress;
+        int year, runtime;
+        Movie favoriteMovie;
+        System.out.println("What is the name of your favorite movie?");
+        movie = in.nextLine();
+        System.out.println("What is the rating of your favorite movie?");
+        rating = in.nextLine();
+        System.out.println("When was " +movie + " released?");
+        year = in.nextInt();
+        System.out.println("In minutes, how long is " +movie + "?");
+        runtime = in.nextInt();
+        in.nextLine();
+        System.out.println("Who is a famous actor from this film?");
+        actor = in.nextLine();
+        System.out.println("Who is a famous actress from this film?");
+        actress = in.nextLine();
+        favoriteMovie = new Movie(movie, rating, year, runtime, actor, actress);
+        System.out.println(favoriteMovie.toString());
+        
+    }
+    
+}
